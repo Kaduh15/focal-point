@@ -3,7 +3,7 @@
 import { handleToggleDoneTaskAction } from '@/actions/handleToggleDoneTask'
 import { revalidatePathAction } from '@/actions/revalidatePath'
 import { useServerAction } from 'zsa-react'
-import { Checkbox } from './ui/Checkbox'
+import { Checkbox } from './Checkbox'
 
 type CheckboxToggleDoneTaskProps = {
   id: number
