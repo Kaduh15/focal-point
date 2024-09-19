@@ -9,7 +9,7 @@
   width: 100%;
 
   border-radius: $border-radius-md;
-  background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+  background: $color-primary-gradient;
 
 
   font-size: $spacing-md;
@@ -17,6 +17,10 @@
   line-height: 1.936rem; 
   letter-spacing: -0.02em;
   color: #fff;
+
+  &:hover {
+    background: $color-primary-end;
+  }
 }
 
 .secondary {
@@ -35,6 +39,11 @@
   line-height: 1.936rem; 
   letter-spacing: -0.02em;
   color: #000;
+
+  &:hover {
+    background: #616469;
+    color: #fff;
+  }
 }
 
 .delete {
@@ -46,11 +55,15 @@
   width: 100%;
 
   border-radius: $border-radius-md;
-  background: linear-gradient(90deg, #FF3A3A 0%, #EB5757 68.65%);;
+  background: $color-error-gradient;
 
   font-size: $spacing-md;
   font-weight: 500;
   line-height: 1.936rem; 
   letter-spacing: -0.02em;
   color: #fff;
+
+  &:hover {
+    background: $color-hover-delete;
+  }
 }
