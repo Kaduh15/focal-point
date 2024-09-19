@@ -1,0 +1,7 @@
+@import '@/styles/main.scss';
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
