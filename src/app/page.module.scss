@@ -1,6 +1,6 @@
 @import '@/styles/main.scss';
 
-.home {
+.main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,6 +10,11 @@
   height: 100%;
   & > div {
     flex: 1;
+  }
+
+  & > button {
+    max-width: 45rem;
+    margin: 0 auto;
   }
 }
 
@@ -21,7 +26,7 @@
   text-align: left;
 }
 
-.messageDate {
+.date {
   font-size: $spacing-md;
   font-weight: 400;
   line-height: 1.936rem;
@@ -36,13 +41,16 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  margin: 0 auto;
+
+  max-width: 45rem;
   padding: $spacing-xl;
 
   gap: $spacing-lg;
   border-radius: $spacing-md;
   border: 0.1rem solid #EAECF0;
 
-  & >div {
+  & > div {
     display: flex;
     flex-direction: column;
     gap: $spacing-sm;

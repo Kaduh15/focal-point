@@ -52,14 +52,14 @@ export default async function Home({
 
   return (
     <>
-      <div className={style.home}>
+      <div className={style.main}>
         <Header />
         <Separator />
 
         <div className={style.container}>
-          <h2 className={style.messageDate}>Suas Tarefas de hoje</h2>
+          <h2 className={style.date}>Suas Tarefas de hoje</h2>
           <div>{uncompletedTasks}</div>
-          <h2 className={style.messageDate}>Tarefas concluídas</h2>
+          <h2 className={style.date}>Tarefas concluídas</h2>
           <div>{completedTasks}</div>
         </div>
 
