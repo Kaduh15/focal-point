@@ -1,5 +1,5 @@
-import { ButtonOpenDeleteTask } from '../ButtonOpenDeleteTask'
-import { CheckboxToggleDoneTask } from '../CheckboxToggleDoneTask'
+import { ButtonOpenDeleteTask } from '../ui/ButtonOpenDeleteTask'
+import { CheckboxToggleDoneTask } from '../ui/CheckboxToggleDoneTask'
 import style from './style.module.scss'
 
 type TaskProps = {

@@ -12,10 +12,7 @@
   background: $color-primary-gradient;
 
 
-  font-size: $spacing-md;
-  font-weight: 500;
-  line-height: 1.936rem; 
-  letter-spacing: -0.02em;
+  @include heading(500, 1.936rem, $spacing-md);
   color: #fff;
 
   &:hover {
@@ -34,10 +31,7 @@
   border-radius: $border-radius-md;
   background-color: #E7EEFB;
 
-  font-size: $spacing-md;
-  font-weight: 500;
-  line-height: 1.936rem; 
-  letter-spacing: -0.02em;
+  @include heading(500, 1.936rem, $spacing-md);
   color: #000;
 
   &:hover {
@@ -57,10 +51,7 @@
   border-radius: $border-radius-md;
   background: $color-error-gradient;
 
-  font-size: $spacing-md;
-  font-weight: 500;
-  line-height: 1.936rem; 
-  letter-spacing: -0.02em;
+  @include heading(500, 1.936rem, $spacing-md);
   color: #fff;
 
   &:hover {

@@ -7,10 +7,7 @@
   width: 100%;
 
   & > label {
-    font-size: $spacing-md;
-    font-weight: 500;
-    line-height: 1.936rem;
-    letter-spacing: -0.02em;
+    @include heading(500, 1.936rem, $spacing-md);
     color: #333333;
   }
 }

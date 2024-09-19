@@ -1,0 +1,18 @@
+@mixin container-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+@mixin heading($width: 500, $line-height: 1.936rem, $size: 1.6rem) {
+  font-size: $size;
+  font-weight: $width;
+  line-height: $line-height;
+  letter-spacing: -0.02em;
+
+  @media (min-width: 60rem) {
+    font-size: $size;
+    line-height: $line-height;
+    letter-spacing: -0.02em;
+  }
+}

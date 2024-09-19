@@ -20,11 +20,9 @@
   }
 
   .title {
+    @include heading(400, 1.936rem, $spacing-md);
+
     flex: 1;
-    font-size: $spacing-md;
-    font-weight: 400;
-    line-height: 1.936rem;
-    letter-spacing: -0.02em;
     text-align: left;
 
     overflow: hidden;

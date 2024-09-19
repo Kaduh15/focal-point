@@ -1,5 +1,5 @@
 import { getAllTasksByUserIdAction } from '@/actions/getAllTasksById'
-import { ButtonOpenAddTask } from '@/components/ButtonOpenAddTask'
+import { ButtonOpenAddTask } from '@/components/ui/ButtonOpenAddTask'
 import { Header } from '@/components/Header'
 import { ModalAddTask } from '@/components/ModalAddTask'
 import { ModalDeleteTask } from '@/components/ModalDeleteTask'
