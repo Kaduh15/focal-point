@@ -1,3 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "@rocketseat/eslint-config/next"
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    ".next",
+    "out",
+    "next.config.mjs"
+  ]
 }

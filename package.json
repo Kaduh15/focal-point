@@ -6,19 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --fix",
+    "db:seed": "tsx src/db/seed.ts",
+    "db:migrate": "drizzle-kit migrate",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "better-sqlite3": "^11.3.0",
+    "dayjs": "^1.11.13",
+    "drizzle-orm": "^0.33.0",
+    "lucide-react": "^0.441.0",
+    "next": "14.2.12",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.12"
+    "sonner": "^1.5.0",
+    "zod": "^3.23.8",
+    "zsa": "^0.6.0",
+    "zsa-openapi": "^0.3.0",
+    "zsa-react": "^0.2.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/better-sqlite3": "^7.6.11",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.24.2",
     "eslint": "^8",
-    "eslint-config-next": "14.2.12"
+    "eslint-config-next": "14.2.12",
+    "sass": "^1.79.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5"
   }
 }
