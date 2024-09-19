@@ -1,0 +1,12 @@
+@import '@/styles/main.scss';
+
+.container {
+  input[type="checkbox"] {
+    &:checked {
+      & + .title {
+        text-decoration: line-through;
+        color: rgba($color: #000000, $alpha: 0.54);
+      }
+    }
+  }
+}
