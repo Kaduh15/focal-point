@@ -26,9 +26,11 @@ export async function Header() {
 
   return (
     <header className={style.container}>
-      <Image src={Logo} width={150} height={36} alt="Logo" />
-      <p className={style.messageWelcome}>Bem-vindo de volta, {user.name}</p>
-      <p className={style.messageDate}>{today}</p>
+      <div>
+        <Image src={Logo} width={150} height={36} alt="Logo" />
+      </div>
+      <p className={style.message_welcome}>Bem-vindo de volta, {user.name}</p>
+      <p className={style.date}>{today}</p>
     </header>
   )
 }
