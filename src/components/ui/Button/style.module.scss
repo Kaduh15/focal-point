@@ -1,0 +1,56 @@
+@import '@/styles/main.scss';
+
+.primary {
+  all: unset;
+
+  text-align: center;
+  padding-block: $spacing-md;
+
+  width: 100%;
+
+  border-radius: $border-radius-md;
+  background: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
+
+
+  font-size: $spacing-md;
+  font-weight: 500;
+  line-height: 1.936rem; 
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.secondary {
+  all: unset;
+
+  text-align: center;
+  padding-block: $spacing-md;
+
+  width: 100%;
+
+  border-radius: $border-radius-md;
+  background-color: #E7EEFB;
+
+  font-size: $spacing-md;
+  font-weight: 500;
+  line-height: 1.936rem; 
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.delete {
+  all: unset;
+
+  text-align: center;
+  padding-block: $spacing-md;
+
+  width: 100%;
+
+  border-radius: $border-radius-md;
+  background: linear-gradient(90deg, #FF3A3A 0%, #EB5757 68.65%);;
+
+  font-size: $spacing-md;
+  font-weight: 500;
+  line-height: 1.936rem; 
+  letter-spacing: -0.02em;
+  color: #fff;
+}
