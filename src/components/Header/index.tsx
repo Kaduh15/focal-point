@@ -18,7 +18,7 @@ export async function Header() {
 
   const [user, err] = await getUserByIdAction({ id: userId })
 
-  if (err) {
+  if (err || !user) {
     return
   }
 

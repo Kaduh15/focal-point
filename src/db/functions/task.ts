@@ -1,6 +1,6 @@
 import { and, eq, gte, lte } from 'drizzle-orm'
 import { db } from '../drizzle'
-import { Task } from '../schema'
+import { Task, User } from '../schema'
 import dayjs from 'dayjs'
 
 export type CreateTaskParams = {
@@ -21,6 +21,12 @@ export type GetAllTasksByUserIdParams = {
 export const getAllTasksByUserId = async ({
   userId,
 }: GetAllTasksByUserIdParams) => {
+  const [user] = await db.select().from(User).where(eq(User.id, userId))
+
+  if (!user) {
+    return []
+  }
+
   const startOfDay = dayjs().startOf('day').toDate()
   const endOfDay = dayjs().endOf('day').toDate()
   const tasks = await db
