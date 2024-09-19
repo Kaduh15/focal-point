@@ -1,0 +1,16 @@
+@import '@/styles/main.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  width: 100%;
+
+  & > label {
+    font-size: $spacing-md;
+    font-weight: 500;
+    line-height: 1.936rem;
+    letter-spacing: -0.02em;
+    color: #333333;
+  }
+}
