@@ -45,6 +45,8 @@ Focal Point é uma aplicação simples de lista de tarefas para o dia atual, des
 
 ### Rodando com Docker
 
+  *ATENÇÃO: você precisará ter o Docker instalado em sua máquina para rodar o projeto com Docker.*
+
 1. **Clone o repositório** e entre na pasta do projeto:
    ```bash
    git clone https://github.com/Kaduh15/focal-point.git
@@ -53,8 +55,8 @@ Focal Point é uma aplicação simples de lista de tarefas para o dia atual, des
 
 2. **Crie a imagem com o Dockerfile** que está na raiz do projeto e suba o container:
    ```bash
-   docker build -t focal-point .
-   docker run -p 3000:3000 -v $(pwd)/sqlite.db:/app/sqlite.db focal-point
+   npm run docker:build
+   npm run docker:run
    ```
 
 ## Considerações Finais

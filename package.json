@@ -10,7 +10,9 @@
     "db:seed": "tsx src/db/seed.ts",
     "db:migrate": "drizzle-kit migrate",
     "db:generate": "drizzle-kit generate",
-    "postinstall": "if [ \"$SKIP_POSTINSTALL\" != \"true\" ]; then npm run db:generate && npm run db:migrate && npm run db:seed; fi"
+    "postinstall": "if [ \"$SKIP_POSTINSTALL\" != \"true\" ]; then npm run db:generate && npm run db:migrate && npm run db:seed; fi",
+    "docker:build": "docker build -t focal-point .",
+    "docker:run": "docker run -d -p 3000:3000 focal-point"
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
