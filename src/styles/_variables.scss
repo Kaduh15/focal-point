@@ -1,0 +1,21 @@
+$color-primary-start: #56CCF2;
+$color-primary-end: #2F80ED;
+$color-primary-gradient: linear-gradient(90deg, var($color-primary-start) 0%, var($color-primary-end) 68.65%);
+$color-secondary: #2D9CDB;
+$color-error-start: #EB5757;
+$color-error-end: #FF3A3A;
+$color-error-gradient: linear-gradient(90deg, var($color-error-start) 0%, var($color-error-end) 68.65%);
+$color-success: #27AE60;
+$color-text-primary: #333333;
+$color-text-secondary: #4F4F4F;
+$color-background: #FFFFFF;
+$color-border: #E0E0E0;
+$color-hover-delete: #FF3A3A;
+
+$spacing-sm: 0.8rem;
+$spacing-md: 1.6rem;
+$spacing-lg: 2.4rem;
+$spacing-xl: 3.2rem;
+
+$border-radius-sm: 0.4rem;
+$border-radius-md: 0.8rem;
