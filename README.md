@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Focal Point
 
-## Getting Started
+## Descrição do Projeto
 
-First, run the development server:
+Focal Point é uma aplicação simples de lista de tarefas para o dia atual, desenvolvida como parte de um desafio para uma vaga na Legaplan. O objetivo foi replicar o design apresentado no Figma, criando uma interface amigável e funcional.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Link do Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Legaplan](https://www.legaplan.com.br/)
+- [Design Figma](https://www.figma.com/design/4iESWnasLZSHyghg1ipj1P/Teste-Dev-Junior---Legaplan?node-id=0-1&node-type=canvas&t=V2Bhqt5xjlKz6MSy-0)
+- [Deploy no Render](https://focal-point.onrender.com)  
+  *Aguarde alguns segundos ao acessar, pois o serviço pode demorar a inicializar após inatividade.*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: Framework React para construção de aplicações web.
+- **Sass**: Pré-processador CSS para estilização.
+- **ZSA**: Para a criação das server actions.
+- **Drizzle ORM**: Para interações com o banco de dados.
+- **Zod**: Para validação de dados.
 
-## Learn More
+## Como Rodar o Projeto Localmente
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/Kaduh15/focal-point.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Entre na pasta do projeto**:
+   ```bash
+   cd focal-point
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+4. **Rode a aplicação**:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Acesse a aplicação no seu navegador em `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Rodando com Docker
+
+1. **Clone o repositório** e entre na pasta do projeto:
+   ```bash
+   git clone https://github.com/Kaduh15/focal-point.git
+   cd focal-point
+   ```
+
+2. **Crie a imagem com o Dockerfile** que está na raiz do projeto e suba o container:
+   ```bash
+   docker build -t focal-point .
+   docker run -p 3000:3000 -v $(pwd)/sqlite.db:/app/sqlite.db focal-point
+   ```
+
+## Considerações Finais
+
+Este projeto foi uma experiência desafiadora e enriquecedora. O objetivo de criar uma aplicação próxima ao design do Figma, utilizando Sass, foi uma oportunidade incrível de aprendizado, pois trabalhei com uma ferramenta que nunca tinha utilizado antes. Acredito que a experiência adquirida ao longo do desenvolvimento será valiosa para minha carreira.
+
+## Contribuições
+
+Sinta-se à vontade para contribuir ou sugerir melhorias!
