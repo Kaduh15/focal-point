@@ -1,0 +1,11 @@
+services:
+  focal-point:
+    container_name: focal-point
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - sqlite-db:/app/sqlite.db
+
+volumes:
+  sqlite-db:
