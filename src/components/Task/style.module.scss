@@ -1,0 +1,40 @@
+@import '@/styles/main.scss';
+
+.container {
+  display: flex;
+  padding: $spacing-md;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacing-md;
+
+  width: 100%;
+
+  border: 0.1rem dashed #D7DDE9;
+  border-radius: $border-radius-sm;
+
+  &:hover {
+    border: 0.1rem dashed #F7F9FD;
+    background-color: #F7F9FD;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .title {
+    flex: 1;
+    font-size: $spacing-md;
+    font-weight: 400;
+    line-height: 1.936rem;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .deleteIcon {
+    color: #B0BBD1;
+    cursor: pointer;
+    height: 1.8rem;
+  }
+}
