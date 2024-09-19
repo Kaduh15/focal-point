@@ -1,0 +1,15 @@
+@import '@/styles/main.scss';
+
+.input {
+  all: unset;
+
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  border: 0.1rem solid #D7DDE9;
+
+  font-size: $spacing-md;
+  font-weight: 400;
+  line-height: 1.936rem;
+  letter-spacing: -0.02em;
+  color: #333333;
+}
