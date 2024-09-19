@@ -1,95 +1,73 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { getAllTasksByUserIdAction } from '@/actions/getAllTasksById'
+import { ButtonOpenAddTask } from '@/components/ButtonOpenAddTask'
+import { Header } from '@/components/Header'
+import { ModalAddTask } from '@/components/ModalAddTask'
+import { ModalDeleteTask } from '@/components/ModalDeleteTask'
+import { Task } from '@/components/Task'
+import { Separator } from '@/components/ui/Separator'
+import React from 'react'
+import style from './page.module.scss'
+import { ModalCreateUser } from '@/components/ModalCreateUser'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
-export default function Home() {
+type HomeProps = {
+  searchParams: {
+    deleteTask?: string
+    addTask?: string
+    createUser?: string
+  }
+}
+
+export default async function Home({
+  searchParams: { addTask, deleteTask, createUser },
+}: HomeProps) {
+  const userId = cookies().get('userId')?.value
+  if (!userId && !createUser) {
+    return redirect('/?createUser=1')
+  }
+
+  if (userId && createUser) {
+    return redirect('/')
+  }
+
+  const [tasks, err] = await getAllTasksByUserIdAction({ id: userId || '' })
+
+  if (err) {
+    return
+  }
+
+  const { completedTasks, uncompletedTasks } = tasks.reduce<{
+    completedTasks: React.JSX.Element[]
+    uncompletedTasks: React.JSX.Element[]
+  }>(
+    (acc, task) => {
+      acc[task.done ? 'completedTasks' : 'uncompletedTasks'].push(
+        <Task key={task.id} id={task.id} title={task.title} done={task.done} />,
+      )
+      return acc
+    },
+    { completedTasks: [], uncompletedTasks: [] },
+  )
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className={style.home}>
+        <Header />
+        <Separator />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={style.container}>
+          <h2 className={style.messageDate}>Suas Tarefas de hoje</h2>
+          <div>{uncompletedTasks}</div>
+          <h2 className={style.messageDate}>Tarefas concluídas</h2>
+          <div>{completedTasks}</div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+
+        <ButtonOpenAddTask />
+      </div>
+      {addTask && <ModalAddTask />}
+      {deleteTask && <ModalDeleteTask id={Number(deleteTask)} />}
+      {createUser && !userId && <ModalCreateUser />}
+    </>
+  )
 }
