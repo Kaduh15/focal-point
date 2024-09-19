@@ -5,5 +5,10 @@ type ModalProps = {
 }
 
 export function Modal({ children }: ModalProps) {
-  return <div className={style.modal}>{children}</div>
+  return (
+    <>
+      <div className={style.backdrop} />
+      <div className={style.modal}>{children}</div>
+    </>
+  )
 }
