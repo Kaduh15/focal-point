@@ -6,6 +6,7 @@ import style from './style.module.scss'
 
 import ptBR from 'dayjs/locale/pt-br'
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 dayjs.locale(ptBR)
 
@@ -18,7 +19,11 @@ export async function Header() {
 
   const [user, err] = await getUserByIdAction({ id: userId })
 
-  if (err || !user) {
+  if (!user) {
+    redirect('/api/logout')
+  }
+
+  if (err) {
     return
   }
 
