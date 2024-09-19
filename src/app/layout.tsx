@@ -10,15 +10,11 @@ export const metadata: Metadata = {
   description: 'Uma ferramenta para criar pontos focais em seus projetos',
 }
 
-type RootLayoutProps = {
-  searchParams: {
-    createUser?: string
-  }
-} & Readonly<{
+export default async function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode
-}>
-
-export default async function RootLayout({ children }: RootLayoutProps) {
+}>) {
   return (
     <html lang="pt-br">
       <body className={inter.className}>{children}</body>

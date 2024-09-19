@@ -9,7 +9,8 @@
     "lint": "next lint --fix",
     "db:seed": "tsx src/db/seed.ts",
     "db:migrate": "drizzle-kit migrate",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "postinstall": "if [ \"$SKIP_POSTINSTALL\" != \"true\" ]; then npm run db:generate && npm run db:migrate && npm run db:seed; fi"
   },
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
@@ -37,6 +38,6 @@
     "eslint-config-next": "14.2.12",
     "sass": "^1.79.1",
     "tsx": "^4.19.1",
-    "typescript": "^5"
+    "typescript": "5.6.2"
   }
 }
