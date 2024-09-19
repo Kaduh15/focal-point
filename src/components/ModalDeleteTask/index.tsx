@@ -35,7 +35,11 @@ export function ModalDeleteTask({ id }: ModalDeleteTaskProps) {
         >
           Deletar
         </Button>
-        <Button onClick={route.back} variant="secondary">
+        <Button
+          disabled={deletePending}
+          onClick={route.back}
+          variant="secondary"
+        >
           Cancelar
         </Button>
       </div>

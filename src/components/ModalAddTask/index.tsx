@@ -11,7 +11,9 @@ export function ModalAddTask() {
       <FormAddTask id="add-test-form" />
       <div className={style.buttons}>
         <Button form="add-test-form">Adicionar</Button>
-        <Button variant="secondary">Cancelar</Button>
+        <Button isLink href="/" variant="secondary">
+          Cancelar
+        </Button>
       </div>
     </Modal>
   )
