@@ -1,10 +1,9 @@
-import { getUserByIdAction } from '@/actions/getUser'
+import { createUserAction } from '@/actions/createUser'
+import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import React from 'react'
 import { Input } from '../ui/Input'
 import style from './style.module.scss'
-import { createUserAction } from '@/actions/createUser'
-import { cookies } from 'next/headers'
 
 type FormCreateUserProps = {} & React.FormHTMLAttributes<HTMLFormElement>
 
@@ -14,11 +13,6 @@ export function FormCreateUser({
   async function FormCreateUserSubmit(data: FormData) {
     'use server'
     const name = data.get('name')
-    const [user, err] = await getUserByIdAction({ id: '1' })
-
-    if (err || !user) {
-      return
-    }
 
     if (!name || typeof name !== 'string') {
       console.error('Title is not a string')
