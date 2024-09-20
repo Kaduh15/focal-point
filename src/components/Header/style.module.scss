@@ -28,10 +28,10 @@
   @include heading(500, 1.936rem, $spacing-md);
   text-align: left;
 
-  @media (min-width: 60rem) {
+
+  @media (min-width: 50rem) {
     flex: 1;
-    font-size: $spacing-lg;
-    line-height: 2.904rem;
+    @include heading(500, 2.904rem, $spacing-lg);
     text-align: center;
   }
 }
