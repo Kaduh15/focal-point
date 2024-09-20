@@ -1,16 +1,13 @@
-$color-primary-start: #56CCF2;
-$color-primary-end: #2F80ED;
-$color-primary-gradient: linear-gradient(90deg, #0796D3 0%, #53C0F0 68.65%);
-$color-secondary: #2D9CDB;
-$color-error-start: #EB5757;
-$color-error-end: #FF3A3A;
-$color-error-gradient: linear-gradient(90deg, #FF3A3A 0%, #EB5757 68.65%);
-// $color-success: #27AE60;
+$color-primary: #0796D3;
+$color-primary-50: #53C0F0;
 $color-text-primary: #000000;
 $color-text-secondary: #505050;
 $color-background: #FFFFFF; 
 $color-border: #D7DDE9;
-$color-hover-delete: #FF3A3A;
+$color-delete: #D30707;
+$color-delete-50: #F05353;
+$color-primary-gradient: linear-gradient(90deg, $color-primary 0%, $color-primary-50 68.65%);
+$color-error-gradient: linear-gradient(90deg, $color-delete 0%, $color-delete-50 68.65%);
 
 $border-1: 0.1rem solid $color-border;
 $border-2: 0.1rem dashed $color-border;
