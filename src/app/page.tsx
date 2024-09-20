@@ -1,15 +1,16 @@
 import { getAllTasksByUserIdAction } from '@/actions/getAllTasksById'
-import { ButtonOpenAddTask } from '@/components/ui/ButtonOpenAddTask'
 import { Header } from '@/components/Header'
 import { ModalAddTask } from '@/components/ModalAddTask'
+import { ModalCreateUser } from '@/components/ModalCreateUser'
 import { ModalDeleteTask } from '@/components/ModalDeleteTask'
 import { Task } from '@/components/Task'
+import { ButtonOpenAddTask } from '@/components/ui/ButtonOpenAddTask'
 import { Separator } from '@/components/ui/Separator'
-import React from 'react'
-import style from './page.module.scss'
-import { ModalCreateUser } from '@/components/ModalCreateUser'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import React from 'react'
+
+import style from './page.module.scss'
 
 type HomeProps = {
   searchParams: {

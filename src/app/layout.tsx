@@ -18,7 +18,15 @@ export default async function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>{children}</body>
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          style: {
+            fontSize: '3.5rem',
+          },
+          duration: 3000,
+          closeButton: true,
+        }}
+      />
     </html>
   )
 }
