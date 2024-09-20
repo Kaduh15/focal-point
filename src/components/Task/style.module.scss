@@ -20,7 +20,7 @@
   }
 
   .title {
-    @include heading(400, 1.936rem, $spacing-md);
+    @include heading(400, 1.936rem, $spacing-md, $color-text-primary);
 
     flex: 1;
     text-align: left;
