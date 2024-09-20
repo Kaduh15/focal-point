@@ -17,7 +17,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: $color-background;
   z-index: 10;
 
   display: flex;
@@ -28,13 +28,12 @@
   padding: $spacing-lg;
 
   & > h2 {
-    @include heading(500, 1.936rem, $spacing-lg);
+    @include heading(500, 1.936rem, $spacing-lg, $color-text-primary);
   }
 
   & > p {
     @include heading(400, 2.4rem, 1.6rem);
     text-align: left;
-    color: $color-text-secondary;
   }
 
   @media (min-width: 45rem) {

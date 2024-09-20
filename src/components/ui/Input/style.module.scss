@@ -5,7 +5,7 @@
 
   padding: $spacing-md;
   border-radius: $border-radius-md;
-  border: 0.1rem solid #D7DDE9;
+  border: 0.1rem solid $color-border;
 
   @include heading(400, 1.936rem, $spacing-md);
   color: #333333;

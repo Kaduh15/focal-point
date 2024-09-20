@@ -4,11 +4,12 @@
   gap: $spacing-sm;
 }
 
-@mixin heading($width: 500, $line-height: 1.936rem, $size: 1.6rem) {
+@mixin heading($width: 500, $line-height: 1.936rem, $size: 1.6rem, $color: $color-text-secondary) {
   font-size: $size;
   font-weight: $width;
   line-height: $line-height;
   letter-spacing: -0.02em;
+  color: $color;
 
   @media (min-width: 60rem) {
     font-size: $size;

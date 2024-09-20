@@ -9,13 +9,13 @@
 .input {
   width: 100%;
   padding: $spacing-sm;
-  border: 0.1rem solid #D7DDE9;
+  border: 0.1rem solid $color-border;
   border-radius: $border-radius-sm;
 }
 
 .button {
   width: 100%;
   padding: $spacing-sm;
-  border: 0.1rem solid #D7DDE9;
+  border: 0.1rem solid $color-border;
   border-radius: $border-radius-sm;
 }

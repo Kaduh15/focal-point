@@ -7,7 +7,6 @@
   width: 100%;
 
   & > label {
-    @include heading(500, 1.936rem, $spacing-md);
-    color: #333333;
+    @include heading(500, 1.936rem, $spacing-md, $color-text-primary);
   }
 }

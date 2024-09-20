@@ -25,13 +25,13 @@
 }
 
 .message_welcome {
-  @include heading(500, 1.936rem, $spacing-md);
+  @include heading(500, 1.936rem, $spacing-md, $color-text-primary);
   text-align: left;
 
 
   @media (min-width: 50rem) {
     flex: 1;
-    @include heading(500, 2.904rem, $spacing-lg);
+    @include heading(500, 2.904rem, $spacing-lg, $color-text-primary);
     text-align: center;
   }
 }

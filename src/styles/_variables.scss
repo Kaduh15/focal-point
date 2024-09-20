@@ -5,12 +5,15 @@ $color-secondary: #2D9CDB;
 $color-error-start: #EB5757;
 $color-error-end: #FF3A3A;
 $color-error-gradient: linear-gradient(90deg, #FF3A3A 0%, #EB5757 68.65%);
-$color-success: #27AE60;
-$color-text-primary: #333333;
-$color-text-secondary: #4F4F4F;
-$color-background: #FFFFFF;
-$color-border: #E0E0E0;
+// $color-success: #27AE60;
+$color-text-primary: #000000;
+$color-text-secondary: #505050;
+$color-background: #FFFFFF; 
+$color-border: #D7DDE9;
 $color-hover-delete: #FF3A3A;
+
+$border-1: 0.1rem solid $color-border;
+$border-2: 0.1rem dashed $color-border;
 
 $spacing-sm: 0.8rem;
 $spacing-md: 1.6rem;

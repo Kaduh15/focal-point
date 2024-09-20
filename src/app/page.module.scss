@@ -32,7 +32,7 @@
 
   gap: $spacing-lg;
   border-radius: $spacing-md;
-  border: 0.1rem solid #EAECF0;
+  border: 0.1rem solid $color-border;
 
   & > div {
     display: flex;
@@ -43,7 +43,6 @@
 
   & > h2 {
     @include heading(400, 1.936rem, $spacing-md);
-    color: $color-text-secondary
   }
 }
 
