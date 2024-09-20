@@ -1,12 +1,35 @@
 @import '@/styles/main.scss';
 
-.container {
-  input[type="checkbox"] {
-    &:checked {
-      & + .title {
-        text-decoration: line-through;
-        color: rgba($color: #000000, $alpha: 0.54);
-      }
+.input {
+  appearance: none;
+
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid $color-border;
+  border-radius: 0.25rem;
+
+  &:hover {
+    border: 1px solid $color-primary;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:checked {
+    background: $color-primary-50 url(../../../assets/checkbox-checked-icon.svg) center no-repeat;
+    border: 0.1rem solid $color-primary;
+
+    &+label {
+      text-decoration: line-through;
+      color: $color-text-secondary-50;
     }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled:checked {
+    background: #d7dde9;
+    border: 1px solid $color-primary;
   }
 }
